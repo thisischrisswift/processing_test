@@ -13,26 +13,62 @@
     <p>Processing demo</p>
     
     <script type="text/processing">
-import processing.pdf.*;
+      Ball[] ball;
+
+      void setup(){
+        size(700, 600);
+        frameRate(100);
+        ball = new Ball[100];
+        for(int i = 0; i < ball.length; i++){
+            ball[i] = new Ball();
+        }
+      }
 
 
-void setup() {
-  size(648, 972);
-  background(0);
-  beginRecord(PDF, "Lights_###.pdf");
-}
 
-void draw() {
-  stroke(255, 80);
-  strokeWeight(0.25);
-  line(100, 100, random(width), random(height));
-  line( width-100, 100, random(width), random(height));
-}
-void keyPressed() {
-  if (key == 'q') {
-    endRecord();
-  }
-}
+      void draw(){
+          background(155,0,0);
+            for(int i = 0; i < ball.length; i++){
+                ball[i].display();
+            }
+
+      }
+      class Ball{
+
+          float x;
+          float y;
+          float Vx;
+          float Vy;
+          float r,g,b,o;
+          float d;
+
+          Ball(){
+              x = random(width);
+              y = random(height);
+              Vx = random(-5,5);
+              Vy = random(-5,5);
+              r = random(255);
+              g = random(255);
+              b = random(255);
+              o = random(255);
+              d = random(30) + 15;
+          }
+
+          void display(){
+              fill(r,g,b,o);
+              ellipse(x,y,d,d);
+              x += Vx;
+              y += Vy;
+              if(x > width || x < 0){
+                  Vx *= -1;
+              }
+              if(y > height || y < 0){
+                  Vy *= -1;
+              }
+          }
+    }
+
+
 
     </script>
     <canvas id="sketch" style="border: 1px solid black;"></canvas>
