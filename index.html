@@ -2,32 +2,32 @@
 
 <html>
 
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Processing Demo</title>
-      <script type="text/javascript" src="js/processing.js"></script>
-  </head>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Processing Demo</title>
+  <script type="text/javascript" src="js/processing.js"></script>
+</head>
+
+<body>
+  <h1>Swift House of Processing</h1>
+  <p>Processing demo 1</p>
   
-  <body>
-    <h1>Granada High Tutorial</h1>
-    <p>Processing demo</p>
-    
-    <script type="text/processing">
-     void setup() {
-     size(648, 972);
+  <script type="text/processing">
+    void setup() {
+      size(648, 972);
       background(0); 
     }
-
-void draw() {
-  stroke(255, 80);
-  strokeWeight(0.25);
-  line(100, 100, random(width), random(height));
-  line( width-100, 100, random(width), random(height));
-}
-
-    </script>
-    <canvas id="sketch" style="border: 1px solid black;"></canvas>
     
-  </body>
+    void draw() {
+      stroke(255, 80);
+      strokeWeight(0.25);
+      line(100, 100, random(width), random(height));
+      line( width-100, 100, random(width), random(height));
+    }
+    
+  </script>
+  <canvas id="sketch" style="border: 1px solid black;"></canvas>
   
+</body>
+
 </html>
