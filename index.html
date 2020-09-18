@@ -1,33 +1,35 @@
 <!Doctype: HTML w/ Processing>
 
-<html>
-
+<html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Processing Demo</title>
+  
+  <title>The HTML5 Herald</title>
   <script type="text/javascript" src="js/processing.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
 </head>
 
 <body>
-  <h1>Swift House of Processing</h1>
-  <p>Processing demo 1</p>
-  
   <script type="text/processing">
-    void setup() {
-      size(1200, 800);
-      background(0); 
-    }
-    
-    void draw() {
-      stroke(255, 80);
-      strokeWeight(0.25);
-      line(100, 100, random(width), random(height));
-      line( width-100, 100, random(width), random(height));
-    }
-    
+  void setup() {
+    size(1200, 800);
+    background(0); 
+  }
+  
+  void draw() {
+    stroke(255, 80);
+    strokeWeight(0.25);
+    line(100, 100, random(width), random(height));
+    line( width-100, 100, random(width), random(height));
+  }
+  
   </script>
-  <canvas id="sketch" style="border: 1px solid black;"></canvas>
+  <h1>This is a test</h1>
+  <h2>More testing</h2>
+  
+  <canvas id="sketch1"></canvas>
+  <canvas id="sketch2"></canvas>
   
 </body>
-
 </html>
