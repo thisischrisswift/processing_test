@@ -10,3 +10,8 @@ h2 {
 #sketch1, #sketch2 {
   border: 6px solid #555;
 }
+
+a {
+  font-family: Times;
+  font-size: 40px;
+}
