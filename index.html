@@ -28,6 +28,20 @@
   </script>
   
   <canvas id="sketch1"></canvas>
+  
+   <script type="text/processing">
+  void setup() {
+    size(600, 600);
+    background(0); 
+  }
+  
+  void draw() {
+    stroke(255, 80);
+    strokeWeight(0.25);
+    line(100, 100, random(width), random(height));
+    line( width-100, 100, random(width), random(height));
+  }
+  </script>
   <canvas id="sketch2"></canvas>
   
 </body>
