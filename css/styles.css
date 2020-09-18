@@ -1,0 +1,12 @@
+h1, h2 {
+  font-size: 32px;
+  font-family: Helvetica;
+}
+
+h2 {
+  font-size: 16px; 
+}
+
+#sketch1, #sketch2 {
+  border: 6px solid #555;
+}
